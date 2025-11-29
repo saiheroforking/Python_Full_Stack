@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Multimedia Form</title>
+    <link rel="stylesheet" href="style/main.css" />
+</head>
+
+<body>
+    <div id="mainContainer">
+
+        <!-- Navigation Section -->
+        <div class="nav">
+            <h1>Responsive Multimedia Form Page</h1>
+        </div>
+
+        <!-- Main Content Grid -->
+        <div id="container">
+
+            <!-- FORM SECTION -->
+            <div class="forms">
+                <h1>Student Details</h1>
+                <form id="studentForm">
+
+                    <div class="form-group">
+                        <input type="text" id="fname" name="fname" required />
+                        <label for="fname">First Name</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="lname" name="lname" required />
+                        <label for="lname">Last Name</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required />
+                        <label for="email">Email</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="tel" id="phone_no" name="phone_no" pattern="[0-9]{10}" required />
+                        <label for="phone_no">Phone Number</label>
+                    </div>
+
+                    <p><strong>Branch:</strong></p>
+                    <label><input type="radio" name="branch" value="CSE" required /> CSE</label>
+                    <label><input type="radio" name="branch" value="ECE" /> ECE</label>
+                    <label><input type="radio" name="branch" value="MECH" /> MECH</label>
+                    <label><input type="radio" name="branch" value="CIVIL" /> CIVIL</label>
+
+                    <p><strong>Skills:</strong></p>
+                    <label><input type="checkbox" name="skills" value="Python" /> Python Full Stack</label><br><br>
+                    <label><input type="checkbox" name="skills" value="Java" /> Java Full Stack</label><br><br>
+                    <label><input type="checkbox" name="skills" value="Data Science" /> Data Science</label><br><br>
+                    <label><input type="checkbox" name="skills" value="AI/ML" /> AI / ML</label><br><br>
+                    <label><input type="checkbox" name="skills" value="Web Development" /> Web
+                        Development</label><br><br>
+                    <label><input type="checkbox" name="skills" value="Data Analytics" /> Data Analytics</label><br><br>
+
+                    <input type="submit" value="Submit" class="submitBtn">
+                </form>
+            </div>
+
+            <!-- MEDIA SECTION -->
+            <div class="mediaContainer">
+
+                <!-- GOOGLE MAP IFRAME -->
+                <div class="mediaSection">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.395042527337!2d78.39954807508824!3d17.493095683411965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91625d9cd1ad%3A0x4455387ad24a675d!2s10000%20Coders!5e0!3m2!1sen!2sin!4v1705577770000!5m2!1sen!2sin"
+                        width="100%" height="300" style="border:0; border-radius:10px;" allowfullscreen=""
+                        loading="lazy">
+                    </iframe>
+                </div>
+
+                <!-- AUDIO PLAYER -->
+                <div>
+                    <audio id="audioPlayer" controls>
+                        <source src="audio/long-journey-short-version-174350.mp3" type="audio/mpeg" />
+                        Your browser does not support audio.
+                    </audio>
+
+                    <!-- AUDIO DURATION -->
+                    <p id="audioInfo" style="font-weight: bold; margin-top: 5px;"></p>
+                </div>
+
+                <!-- VIDEO PLAYER -->
+                <div>
+                    <video id="videoPlayer" width="100%" height="260" controls>
+                        <source src="videos/video.mp4" type="video/mp4" />
+                        Your browser does not support video.
+                    </video>
+
+                    <!-- VIDEO RESOLUTION -->
+                    <p id="videoInfo" style="font-weight: bold; margin-top: 5px;"></p>
+                </div>
+
+            </div>
+
+        </div> <!-- End of container -->
+
+    </div> <!-- End of mainContainer -->
+
+    <script src="Scripts/app.js"></script>
+</body>
+
+</html>

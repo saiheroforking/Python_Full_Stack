@@ -1,0 +1,185 @@
+/* BODY & BACKGROUND */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg, #ffffff, #ffffff);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* NAVIGATION */
+.nav {
+    position: fixed;
+    /* Make it stick on top */
+    top: 0;
+    /* Stick to the top */
+    left: 0;
+    /* Align to left */
+    width: 100%;
+    /* Full width */
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    padding: 20px 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    /* Keep it above other elements */
+}
+
+.nav h1 {
+    margin: 0;
+    font-size: 26px;
+    text-align: center;
+}
+
+/* MAIN CONTAINER GRID */
+#container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 100px 20px 20px 20px;
+    /* top padding equals nav height */
+    gap: 30px;
+    align-items: start;
+}
+
+/* FORM CARD */
+.forms {
+    width: 85%;
+    min-height: 500px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(15px);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.forms h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* FORM GROUP */
+.form-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.form-group input {
+    width: 94%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background: transparent;
+    font-size: 16px;
+}
+
+.form-group label {
+    position: absolute;
+    top: 14px;
+    left: 12px;
+    transition: 0.3s;
+    color: #555;
+}
+
+.form-group input:focus+label,
+.form-group input:not(:placeholder-shown)+label {
+    top: -10px;
+    background: white;
+    padding: 0 6px;
+    font-size: 13px;
+    color: #111;
+}
+
+/* RADIO & CHECKBOX */
+input[type="radio"],
+input[type="checkbox"] {
+    transform: scale(1.2);
+    margin-right: 6px;
+}
+
+/* SUBMIT BUTTON */
+.submitBtn {
+    padding: 14px 20px;
+    width: 100%;
+    background: aqua;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submitBtn:hover {
+    background: #00cfcf;
+}
+
+/* MEDIA CARD */
+.mediaContainer {
+    width: 85%;
+    min-height: 500px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(15px);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.mediaSection {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.mediaSection iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+    border-radius: 12px;
+}
+
+/* AUDIO & VIDEO */
+#audioPlayer,
+#videoPlayer {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 768px) {
+    #container {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .forms,
+    .mediaContainer {
+        width: 100%;
+        padding: 20px;
+        min-height: auto;
+    }
+
+    .nav h1 {
+        font-size: 22px;
+    }
+
+    video,
+    iframe {
+        height: 220px;
+    }
+}
